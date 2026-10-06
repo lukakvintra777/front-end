@@ -1,0 +1,122 @@
+/* ====================================================
+   1. ELEMENT SELECTOR
+   Targets all <body> elements
+   ==================================================== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333333;
+}
+
+/* ====================================================
+   2. ID SELECTOR
+   Targets the unique element with id="main-header"
+   ==================================================== */
+#main-header {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* ====================================================
+   3. CLASS SELECTORS
+   Targets elements with class="blog-card" and class="meta-info"
+   ==================================================== */
+.blog-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.meta-info {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ====================================================
+   4. DESCENDANT SELECTOR
+   Targets <a> links that are descendants of <nav>
+   ==================================================== */
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====================================================
+   5. GROUPING SELECTOR
+   Targets both <h2> and <h3> headings at once
+   ==================================================== */
+h2, h3 {
+  color: #0f172a;
+  margin-top: 0;
+}
+
+/* ====================================================
+   LAYOUT & MEDIA STYLING
+   ==================================================== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Makes the two articles stack on the left side of grid */
+#article-1, #article-2 {
+  grid-column: 1 / 2;
+}
+
+#sidebar {
+  grid-column: 2 / 3;
+  background-color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.media-container {
+  margin-top: 1rem;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+audio {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0f172a;
+  color: #94a3b8;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  #article-1, #article-2, #sidebar {
+    grid-column: 1;
+  }
+}
